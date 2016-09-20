@@ -16,3 +16,5 @@ RUN usermod -aG docker jenkins
 RUN chown -R jenkins:jenkins $JENKINS_HOME/
 
 USER jenkins
+
+HEALTHCHECK CMD curl --fail http://localhost:8080/ || exit 1
