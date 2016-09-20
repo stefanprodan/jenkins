@@ -1,9 +1,9 @@
 from jenkinsci/jenkins:latest
 
 COPY config/*.xml $JENKINS_HOME/
-COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
-COPY plugins.txt /usr/share/jenkins/ref/
-RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
+COPY config/executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
+COPY config/plugins.txt /usr/share/jenkins/ref/
+RUN /usr/local/bin/install-plugins.sh /usr/share/jenkins/ref/plugins.txt
 
 USER root
 RUN apt-get update -qq
