@@ -30,3 +30,11 @@ docker run -d --name jenkins \
 	-v /home/$(whoami)/jenkins_home:/var/jenkins_home \ 
 	stefanprodan/jenkins
 ```
+
+After starting the container, look in the logs for the admin password that Jenkins is generation on first run:
+
+```
+docker logs jenkins
+```
+
+You can access the Jenkins UI by navigation to `http://localhost:8080` on the the machine.
