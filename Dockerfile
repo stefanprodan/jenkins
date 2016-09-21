@@ -3,7 +3,7 @@ FROM jenkins:2.7.4
 COPY config/*.xml $JENKINS_HOME/
 COPY config/executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 
-RUN /usr/local/bin/install-plugins.sh ansible ant gradle xunit workflow-aggregator docker-workflow build-timeout credentials-binding ssh-agent ssh-slaves timestamper ws-cleanup email-ext github-organization-folder purge-job-history
+RUN /usr/local/bin/install-plugins.sh ant gradle xunit workflow-aggregator docker-workflow build-timeout credentials-binding ssh-agent ssh-slaves timestamper ws-cleanup email-ext github-organization-folder purge-job-history
 
 USER root
 RUN apt-get update -qq

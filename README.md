@@ -2,24 +2,7 @@
 
 [![layers](https://images.microbadger.com/badges/image/stefanprodan/jenkins.svg)](https://microbadger.com/images/stefanprodan/jenkins)
 
-This is a Jenkins CI Server v2.7.4 image suitable for running CD work-flows inside containers using Jenkins Docker Pipeline and the Docker daemon present on the host system. Note that this is not a "Docker in Docker" Jenkins setup. This image requires the Docker socket to be mounted inside the Jenkins container. All the Docker commands issued by the Jenkins Docker Pipeline will be executed on the host system.
-
-Pre-installed plugins:
-
-* Ansible
-* Ant
-* Build Timeout
-* GitHub
-* Gradle
-* Pipeline
-* Purge Job History
-* CloudBees Docker Pipeline
-* Credentials Binding
-* SSH Agent
-* SSH Slaves
-* Timestamper
-* Workspace Cleanup
-* Xunit
+This is a Jenkins CI Server v2.7.4 image suitable for running CD work-flows inside disposable containers using Jenkins Docker Pipeline and the Docker daemon present on the host system. Note that this is not a "Docker in Docker" Jenkins setup. This image requires the Docker socket to be mounted inside the Jenkins container. All the Docker commands issued by the Jenkins Docker Pipeline will be executed on the host system.
 
 ### Running Jenkins CI
 
@@ -50,3 +33,21 @@ docker logs jenkins
 ```
 
 After login, chose ***Select plugins to install*** and uncheck all.
+
+### Jenkins plugins
+
+Pre-installed plugins:
+
+* Ant
+* Build Timeout
+* GitHub
+* Gradle
+* Pipeline
+* Purge Job History
+* CloudBees Docker Pipeline
+* Credentials Binding
+* SSH Agent
+* SSH Slaves
+* Timestamper
+* Workspace Cleanup
+* Xunit
