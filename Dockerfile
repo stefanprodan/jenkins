@@ -1,4 +1,4 @@
-FROM jenkins:2.7.3
+FROM jenkins:2.7.4
 
 COPY config/*.xml $JENKINS_HOME/
 COPY config/executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
