@@ -13,7 +13,7 @@ Pre-installed plugins:
 
 First you need to setup a persistent storage and mount it as `JENKINS_HOME`, you can do this by creating a directory on the host or by using a Docker volume.
 
-Create directory on the host and give ownership to the Jenkins user:
+Create a directory on the host and give ownership to the Jenkins user (uid 1000):
 
 ```bash
 JENKINS_HOME=/home/$(whoami)/jenkins_home
