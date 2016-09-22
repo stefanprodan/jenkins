@@ -1,4 +1,4 @@
-FROM jenkins:2.7.4
+FROM jenkins:latest
 
 # Configure Jenkins
 COPY config/*.xml $JENKINS_HOME/
