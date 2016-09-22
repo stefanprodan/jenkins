@@ -1,6 +1,6 @@
 # Jenkins CI 
 
-[![layers](https://images.microbadger.com/badges/image/raduporumb/jenkins.svg)](https://microbadger.com/images/raduporumb/jenkins)
+[![layers](https://images.microbadger.com/badges/image/stefanprodan/jenkins.svg)](https://microbadger.com/images/stefanprodan/jenkins)
 
 This is a Jenkins CI Server v2.7.4 image suitable for running CD work-flows inside disposable containers using Jenkins Docker Pipeline and the Docker daemon present on the host system. Note that this is not a "Docker in Docker" Jenkins setup. This image requires the Docker socket to be mounted inside the Jenkins container. All the Docker commands issued by the Jenkins Docker Pipeline will be executed on the host system. This image also has Ansible installed.
 
@@ -34,7 +34,7 @@ docker run -d --name jenkins \
 	-v /var/run/docker.sock:/var/run/docker.sock \ 
 	-v /home/$(whoami)/jenkins_home:/var/jenkins_home \ 
 	-v /home/$(whoami)/ansible:/etc/ansible \ 
-	raduporumb/jenkins
+	stefanprodan/jenkins
 ```
 
 After starting the container, you can access Jenkins at `http://localhost:8080`. Look in the logs for the admin password that Jenkins is generating on first run:
