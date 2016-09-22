@@ -6,22 +6,22 @@ COPY config/executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groo
 
 # Install plugins
 RUN /usr/local/bin/install-plugins.sh \
-    ant:1.4 \
-    ansible:0.5 \
-    gradle:1.25 \
-    xunit:1.102 \
-    workflow-aggregator:2.4 \
-    docker-workflow:1.8 \
-    build-timeout:1.17.1 \
-    credentials-binding:1.9 \
-    ssh-agent:1.13 \
-    ssh-slaves:1.11 \
-    timestamper:1.8.6 \
-    ws-cleanup:0.30 \
-    email-ext:2.47 \
-    github-organization-folder:1.5 \
-    purge-job-history:1.1 \
-    simple-theme-plugin:0.3
+    ant \
+    ansible \
+    gradle \
+    xunit \
+    workflow-aggregator \
+    docker-workflow \
+    build-timeout \
+    credentials-binding \
+    ssh-agent \
+    ssh-slaves \
+    timestamper \
+    ws-cleanup \
+    email-ext \
+    github-organization-folder \
+    purge-job-history \
+    simple-theme-plugin
 
 USER root
 
